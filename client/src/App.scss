@@ -1,0 +1,10 @@
+@import "./styles/styles";
+$xsmall: 535px;
+$small: 775px;
+$medium: 900px;
+$large: 900px;
+
+.App{
+  //background: deeppink;
+  min-width: $xsmall;
+}

@@ -1,0 +1,227 @@
+@import "../_fonts";
+@import "../_colors";
+
+.login {
+  //background: deeppink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-main;
+  height: 100vh;
+  width: 100%;
+
+  .border {
+    //background: deepskyblue;
+    padding: 1rem;
+    height: 80%;
+    width: 500px;;
+    display: flex;
+    flex-direction: column;
+
+    &__divider {
+      text-align: center;
+      position: relative;
+      height: 20px;
+      width: 100%;
+      overflow: visible;
+      margin-bottom: 10px;
+      border: none;
+      border-top: 2px solid #e0e0e0;
+      display: flex;
+      &:after {
+        width: 5vw;
+        content: 'Or';
+        display: inline;
+        position: absolute;
+        right: 45%;
+        top: -60%;
+        background: #fff;
+      }
+    }
+
+    .login-label {
+      //background: greenyellow;
+      margin-bottom: 1rem;
+    }
+
+    .input-group {
+      //background:blueviolet;
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+
+      &__label {
+        //background:green;
+        display: block;
+        position: absolute;
+        top: 0;
+        // to keep the position center
+        line-height: $input-height;
+        color: #aaa;
+        left: 5px;
+        padding: 0 5px;
+        transition: line-height 200ms ease-in-out,
+        font-size 200ms ease-in-out,
+        top 200ms ease-in-out;
+        /* firefox fix */
+        pointer-events: none;
+      }
+
+      &__input {
+        //background:tomato;
+        background-color: #e8f0fe;
+        width: 100%;
+        height: $input-height;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        padding: 0 10px;
+        /* there must a required prop in input
+         &:valid,
+        need to add placeholder */
+        &:not(:placeholder-shown),
+        &:focus {
+          + label {
+            background-color: white;
+            line-height: 10px;
+            opacity: 1;
+            font-size: 10px;
+            top: -5px;
+          }
+        }
+
+        &:focus {
+          outline: none;
+          border: 1px solid $primary-color;
+
+          + label {
+            color: $primary-color;
+          }
+        }
+      }
+
+      &__password_show {
+        //background: deeppink;
+        position: absolute;
+        top: 1.2vh;
+        right: 1vw;
+      }
+    }
+
+    .login-options {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+
+    .alternative-sign-in {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .button {
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+        color: $dark-gray;
+      }
+
+      &__google-sign-in {
+        background-color: #2a75f3;
+        border-color:#ffffff ;
+        color: #ffffff;
+        border-radius:8px ;
+        width: 75%;
+        height: 80%;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 20px;
+        margin-bottom: 1rem;
+      }
+
+      &__alternative-options {
+        background-color: #6e6d7a;
+        border-color:#ffffff ;
+        color: #ffffff;
+        border-radius:8px ;
+        width: 15%;
+        height: 80%;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: .3px;
+        line-height: 10px;
+        margin-bottom: 1rem;
+        &__icon {
+          height: 15px;
+        }
+      }
+
+      &__create_account {
+        background-color: #f082ac;
+        border-color:#ffffff ;
+        color: #ffffff;
+        border-radius:8px ;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+
+    .terms {
+      margin-top: 1rem;
+      display: flex;
+
+      &__label {
+        font-size: 0.8rem;
+        color: #686d7a;
+        flex-basis: 100%;
+
+        a {
+          color: #7263d4;
+        }
+      }
+    }
+
+    .account-sign-in {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #0d0c22;
+      &__text {
+        font-size: 0.8rem;
+        flex-basis: 100%;
+        a {
+          color: #7263d4;
+        }
+      }
+    }
+
+
+    .alternate-section {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__forget-password {
+      }
+
+      &__signup {
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+.badges{
+  //background-color: deepskyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 0 4rem;
+  margin-top: .5rem;
+  &__title {
+    display: flex;
+    //background-color: cornflowerblue;
+    align-self: flex-start;
+  }
+  &__container {
+    //background-color: coral;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    &__game {
+      background-color: greenyellow;
+      height: 32px;
+      padding: 0 4px;
+      border-radius: 8px;
+      border: black 1px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: .5rem;
+    }
+  }
+}
